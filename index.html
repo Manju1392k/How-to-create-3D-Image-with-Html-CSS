@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Image</title>
+
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .container {
+            font-family: sans-serif;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .TomJerryNoShadow {
+            height: 17rem;
+        }
+
+        .TomJerry {
+            transform: rotateX(8deg) rotateZ(4deg);
+            filter: drop-shadow(10px 10px #000);
+            height: 17rem;
+        }
+
+        .beforeImage {
+            width: max-content;
+            height: max-content;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            border: 5px dashed #fff;
+            border-radius: 8px;
+            animation: dash 1s linear infinite;
+        }
+
+        /*  Keyframe for Border Snake Rotating Effect. */
+        @keyframes dash {
+            0% {
+                border-top: 5px dashed red;
+            }
+
+            25% {
+                border-right: 5px dashed red;
+            }
+
+            50% {
+                border-bottom: 5px dashed red;
+            }
+
+            100% {
+                border-left: 5px dashed red;
+            }
+        }
+
+        .afterImage {
+            width: max-content;
+            height: max-content;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            border: 5px dashed #fff;
+            border-radius: 8px;
+            animation: dash2 1s linear infinite;
+        }
+
+        /*  Keyframe for Border Snake Rotating Effect. */
+        @keyframes dash2 {
+            0% {
+                border-top: 5px dashed green;
+            }
+
+            25% {
+                border-right: 5px dashed green;
+            }
+
+            50% {
+                border-bottom: 5px dashed green;
+            }
+
+            100% {
+                border-left: 5px dashed green;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Div for container. -->
+    <div class="container">
+
+        <!-- Div for Before-Image -->
+        <div class="beforeImage">
+            <h1>Before</h1>
+            <img class="TomJerryNoShadow" src="/Tom&Jerry.png" alt="">
+        </div>
+
+        <!-- Div for After-Image -->
+        <div class="afterImage">
+            <h1>After</h1>
+            <img class="TomJerry" src="/Tom&Jerry.png" alt="">
+        </div>
+
+    </div>
+
+</body>
+
+</html>
